@@ -1,6 +1,6 @@
 import json
 
-from captcha.auto import guess
+from .auto import guess
 
 with open('data/captcha/truth.json') as f:
     truth_data = json.load(f)

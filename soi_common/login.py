@@ -10,10 +10,10 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from captcha_helper import get_captcha_from_page
-from common import base_url, get_form_data, session, ensure_dir, data_dir
+from .captcha_helper import get_captcha_from_page
+from .common import base_url, get_form_data, session, ensure_dir, data_dir
 
-from otp import setup_otp_listener, get_otp_pb, get_otp_manual
+from .otp import setup_otp_listener, get_otp_pb, get_otp_manual
 
 logger = logging.getLogger(__name__)
 

@@ -6,8 +6,8 @@ from pathlib import Path
 from PIL import Image
 from imgcat import imgcat
 
-from captcha.auto import guess, save_captcha
-from common import session, base_url
+from .captcha.auto import guess, save_captcha
+from .common import session, base_url
 
 logger = logging.getLogger(__name__)
 

@@ -4,7 +4,7 @@ import queue
 
 import pushbullet
 
-from pb_listener import Listener
+from .pb_listener import Listener
 
 
 def get_otp_manual():
