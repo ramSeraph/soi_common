@@ -22,6 +22,9 @@ homepage = "https://github.com/ramSeraph/soi_common"
 repository = "https://github.com/ramSeraph/soi_common.git"
 
 
+[project.scripts]
+download-captcha-models = "utils.download_captcha_models:main"
+
 [build-system]
 requires = [
     "hatchling",
@@ -31,10 +34,12 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.sdist]
 include = [
     "soi_common",
+    "utils",
 ]
 
 [tool.hatch.build.targets.wheel]
 include = [
     "soi_common",
+    "utils",
 ]
 
