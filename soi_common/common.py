@@ -17,6 +17,11 @@ def reset_session():
     global session
 
     session = requests.session()
+    # SOI serves different WebForms markup to Python's default user agent.
+    session.headers['User-Agent'] = (
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
+        'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36'
+    )
     PROXY_URL = os.environ.get('PROXY_URL', None)
     if PROXY_URL is not None:
         session.proxies = {'https': PROXY_URL, 'http': PROXY_URL}
